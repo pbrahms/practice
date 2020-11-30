@@ -4,7 +4,9 @@ But for multiples of three print “Fizz” instead of the number and for the mu
 For numbers which are multiples of both three and five print “FizzBuzz“ 
 */
 
-let fizzBuzz = function() {
+//solution 1
+
+let fizzBuzz1 = function() {
     let arr = [];
     for (let i=1; i<=100; i++) {
         if (i % 3 === 0) {
@@ -25,4 +27,28 @@ let fizzBuzz = function() {
     return arr;
 }
 
-console.log(fizzBuzz());
+console.log(fizzBuzz1());
+
+//solution 2
+
+let fizzBuzz2 = function() {
+    let arr = [];
+    for (let i=1; i<=100; i++) {
+        let j = '';
+        if (i % 3 === 0 || i % 5 === 0) {
+            if (i % 3 === 0) {
+                j = 'Fizz';
+            }    
+            if (i % 5 === 0) {
+                j = j + 'Buzz';
+            }
+        }        
+        else {
+            j = i;
+        }
+        arr.push(j);
+    }
+    return arr;
+}
+
+console.log(fizzBuzz2());
