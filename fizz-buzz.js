@@ -26,8 +26,8 @@ let fizzBuzz1 = function() {
     }
     return arr;
 }
-
 console.log(fizzBuzz1());
+
 
 //solution 2
 
@@ -50,5 +50,28 @@ let fizzBuzz2 = function() {
     }
     return arr;
 }
-
 console.log(fizzBuzz2());
+
+
+//solution 3
+
+let fizzBuzz3 = function() {
+    let arr = [];
+    for (let i=1; i<=100; i++) {
+        let j = '';
+        if (i % 3 === 0) {
+            j = 'Fizz';
+        }    
+        if (i % 5 === 0) {
+            j = j + 'Buzz';
+        }       
+        if (j === '') {
+            arr.push(i);
+        }
+        else {
+            arr.push(j);
+        }        
+    }
+    return arr;
+}
+console.log(fizzBuzz3());
