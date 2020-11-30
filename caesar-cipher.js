@@ -7,10 +7,14 @@ let isLowerCase = function(char) {
     }
 }
 
+
+//Encrypt
+
 let caesarEncrypt = function(word, key) {
     let origAr = word.split('');
     let crypAr = [];
-    key = key % 25;
+    key = key % 26;
+    
     for(let i=0; i<word.length; i++) {
         let n = origAr[i].toUpperCase().charCodeAt(0) + key;
         if(n > 90) {
@@ -33,6 +37,9 @@ let caesarEncrypt = function(word, key) {
     let crypSt = crypAr.join('');
     return crypSt;
 }
+
+
+//Decrypt
 
 let caesarDecrypt = function(word, key) {
     let origAr = word.split('');
@@ -63,7 +70,7 @@ let caesarDecrypt = function(word, key) {
     return crypSt;
 }
 
-let x = caesarEncrypt('Filip', 1);
+let x = caesarEncrypt('FILip', 26);
 let y = caesarDecrypt('Gjmjq', 1);
 console.log(x);
 console.log(y);
