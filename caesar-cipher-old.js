@@ -1,13 +1,23 @@
+let isLowerCase = function(char) {
+    if (char == char.toLowerCase()) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+
 //Encrypt
 
-let caesarEncrypt = function (word, key) {
+let caesarEncrypt = function(word, key) {
     let origAr = word.split('');
     let crypAr = [];
     key = key % 26;
-
-    for (let i = 0; i < word.length; i++) {
+    
+    for(let i=0; i<word.length; i++) {
         let n = origAr[i].toUpperCase().charCodeAt(0) + key;
-        if (n > 90) {
+        if(n > 90) {
             let p = n - 90;
             crypAr.push(String.fromCharCode(64 + p));
         }
@@ -19,8 +29,8 @@ let caesarEncrypt = function (word, key) {
             crypAr.push(String.fromCharCode(n));
         }
     }
-    for (let i = 0; i < word.length; i++) {
-        if (origAr[i] == origAr[i].toLowerCase()) {
+    for(let i=0; i<word.length; i++){
+        if(isLowerCase(origAr[i])) {
             crypAr[i] = crypAr[i].toLowerCase();
         }
     }
@@ -31,15 +41,15 @@ let caesarEncrypt = function (word, key) {
 
 //Decrypt
 
-let caesarDecrypt = function (word, key) {
+let caesarDecrypt = function(word, key) {
     let origAr = word.split('');
     let crypAr = [];
     key = key % 25;
     key = key * -1;
 
-    for (let i = 0; i < word.length; i++) {
+    for(let i=0; i<word.length; i++) {
         let n = origAr[i].toUpperCase().charCodeAt(0) + key;
-        if (n > 90) {
+        if(n > 90) {
             let p = n - 90;
             crypAr.push(String.fromCharCode(64 + p));
         }
@@ -51,8 +61,8 @@ let caesarDecrypt = function (word, key) {
             crypAr.push(String.fromCharCode(n));
         }
     }
-    for (let i = 0; i < word.length; i++) {
-        if (isLowerCase(origAr[i])) {
+    for(let i=0; i<word.length; i++){
+        if(isLowerCase(origAr[i])) {
             crypAr[i] = crypAr[i].toLowerCase();
         }
     }

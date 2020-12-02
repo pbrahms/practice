@@ -95,7 +95,7 @@ console.log(fizzBuzz4());
 //solution 5
 
 let fizzBuzz5 = function () {
-    console.log("Fizz Buzz solution 5");
+    //console.log("Fizz Buzz solution 5");
     for (let i = 1; i <= 100; i++) {
         if (i % 15 == 0) { console.log("FizzBuzz"); }
         else if (i % 3 == 0) { console.log("Fizz"); }
