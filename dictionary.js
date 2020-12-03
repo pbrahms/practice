@@ -16,12 +16,12 @@ let storedString;
 let storedArray = [];
 
 getText = async () => {
-    const { data } = await axios.get(url)
-    return data
+    const { data } = await axios.get(url);
+    return data;
 }
 
 let splitFunc = async () => {
-    storedString = await getText();;
+    storedString = await getText();
     storedArray = storedString.split(/[\r\n]+/);
     return storedArray;
 }
@@ -40,7 +40,6 @@ let compare = async (word) => {
     if (check === true) {
         console.log(word + ' is in the dictionary, at index number ' + index + '.');
         return word + ' is in the dictionary, at index number ' + index + '.';
-        
     }
     else {
         console.log(word + ' is not in the dictionary.');
@@ -49,4 +48,3 @@ let compare = async (word) => {
 }
 
 compare('Aardvark');
-
