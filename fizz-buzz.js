@@ -77,7 +77,7 @@ let fizzBuzz3 = function () {
 console.log(fizzBuzz3());
 
 
-//solution 4
+//solution 4 - optimized solution 1
 
 let fizzBuzz4 = function () {
     arr = [];
@@ -92,7 +92,7 @@ let fizzBuzz4 = function () {
 console.log(fizzBuzz4());
 
 
-//solution 5
+//solution 5 - optimized solution 2
 
 let fizzBuzz5 = function () {
     //console.log("Fizz Buzz solution 5");
