@@ -11,9 +11,9 @@
 
 const axios = require('axios');
 
-let url = 'https://www.scrabble.org.nz/assets/CSW15.txt';
-let storedString;
-let storedArray = [];
+let url = 'https://www.scrabble.org.nz/assets/CSW15.txt',
+    storedString,
+    storedArray = [];
 
 getText = async () => {
     const { data } = await axios.get(url);
@@ -31,7 +31,7 @@ let compare = async (word) => {
     let check = false;
     let index;
     word = word.toUpperCase();
-    for (let i=0; i<=compArray.length; i++) {
+    for (let i = 0; i <= compArray.length; i++) {
         if (word === compArray[i]) {
             check = true;
             index = i;
@@ -39,11 +39,11 @@ let compare = async (word) => {
     }
     if (check === true) {
         console.log(word + ' is in the dictionary, at index number ' + index + '.');
-        return word + ' is in the dictionary, at index number ' + index + '.';
+        return true;
     }
     else {
         console.log(word + ' is not in the dictionary.');
-        return word + ' is not in the dictionary.';
+        return false;
     }
 }
 
