@@ -305,8 +305,3 @@ let compare = async function () {
 }
 
 compare();
-
-
-
-
-

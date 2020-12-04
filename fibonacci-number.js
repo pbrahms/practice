@@ -18,9 +18,3 @@ let fibonacci = function (index) {
     }
 }
 console.log(fibonacci(8));
-
-
-
-
-
-
