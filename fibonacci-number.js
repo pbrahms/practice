@@ -25,20 +25,12 @@ console.log(fibonacci(8));
 //solution 2 - recursive function
 
 let fibonacci = function (index) {
-    let num0 = 0,
-        num1 = 1,
-        num2;
-    if (index === 0) {
-        return num0;
-    }
-    else if (index === 1) {
-        return num1;
+    let num;
+    if (index === 0 || index === 1) {
+        return index;
     }
     else {
-        for (let i = 2; i <= index; i++) {
-            num2 = fibonacci(index - 1) + fibonacci(index - 2);
-        }
-        return num2;
+        return num = fibonacci(index - 1) + fibonacci(index - 2);
     }
 }
-console.log(fibonacci(8));
+console.log(fibonacci(15));
